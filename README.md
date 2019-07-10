@@ -1,2 +1,2 @@
-# Boba-Maps
-🍵 Map with ratings of local bubble tea shops in your area 🥛
+# 🍵 Boba-Maps 🥛
+Find a good local bubble tea shop in your area!

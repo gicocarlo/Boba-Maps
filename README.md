@@ -1,7 +1,7 @@
 # 🍵 Boba-Maps 🥛
 Find a local bubble tea shop in your area!
 
-## ✅ Todo Checklist ✅
+## Todo Checklist 
 - [ ] Brush up on Javascript
 - [ ] Learn SQL
 - [ ] Learn Django

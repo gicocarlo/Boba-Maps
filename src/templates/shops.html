@@ -2,7 +2,13 @@
 
 {% block content %}
 <h1>This is the Boba Shops page</h1>
-<p>{{ id }}</p>
-<p>{{ name }}</p>
-<p>{{ url }}</p>
+<ul>
+  {% for boba in boba_list %}
+    <p>{{ forloop.counter }}</p>
+    <li>{{ boba.name }}</li>
+    <li>{{ boba.url }}</li>
+    <li>{{ boba.addresses }}</li>
+    <li>{{ boba.rating }}</li>
+  {% endfor %}
+</ul>
 {% endblock %}

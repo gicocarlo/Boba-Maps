@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Shops</title>
-  </head>
-  <body>
-    <h1>Shops page</h1>
-  </body>
-</html>
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>This is the Boba Shops page</h1>
+<p>{{ id }}</p>
+<p>{{ name }}</p>
+<p>{{ url }}</p>
+{% endblock %}

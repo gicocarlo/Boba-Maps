@@ -15,7 +15,7 @@ BUSINESS_PATH = '/businesses/' #ID
 
 # DEFAULTS
 DEFAULT_LOCATION = 'San Francisco, CA'
-SEARCH_LIMIT = 5
+SEARCH_LIMIT = 3
 
 def request(host, path, api_key, params=None):
     params = params or {}
@@ -64,4 +64,4 @@ def boba_shops():
 def shops_view(request):
     boba_list = boba_shops()
     boba_dict = {'boba_list': boba_list}
-    return render(request, 'shops.html', boba_dict)
+    return render(request, 'html/shops.html', boba_dict)

@@ -1,6 +1,7 @@
-{% extends 'base.html' %}
+{% extends 'html/base.html' %}
 
 {% block content %}
+
 <h1>This is the Boba Shops page</h1>
 <ul>
   {% for boba in boba_list %}
@@ -11,4 +12,5 @@
     <li>{{ boba.rating }}</li>
   {% endfor %}
 </ul>
+
 {% endblock %}

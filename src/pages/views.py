@@ -4,7 +4,7 @@ from django.shortcuts import render
 
 # home_view()
 def home_view(request):
-    return render(request, 'home.html')
+    return render(request, 'html/home.html')
 
 # about_view()
 def about_view(request):

@@ -5,13 +5,11 @@
     <title>Boba Maps</title>
   </head>
   <body>
-    <h1>This is the header of the web app</h1>
-    <!-- {% include 'index.html'} -->
-    {% block content %}
+    {% include 'html/nav.html' %}
 
+    {% block content %}
     {% endblock %}
   </body>
-  <footer>
-    <h1>This is the footer of the web app</h1>
-  </footer>
+  
+  {% include 'html/foot.html' %}
 </html>

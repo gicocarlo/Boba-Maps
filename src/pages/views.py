@@ -4,8 +4,8 @@ from django.shortcuts import render
 
 # home_view()
 def home_view(request):
-    return render(request, 'html/home.html')
+    return render(request, 'home.html')
 
 # about_view()
 def about_view(request):
-    pass
+    return render(request, 'about.html')

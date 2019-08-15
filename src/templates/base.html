@@ -1,15 +1,23 @@
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>Boba Maps</title>
+    {% block mapCSS %}
+    {% endblock %}
+
   </head>
   <body>
-    {% include 'html/nav.html' %}
+    {% include 'nav.html' %}
 
     {% block content %}
     {% endblock %}
+
+    {% block map %}
+    {% endblock %}
   </body>
-  
-  {% include 'html/foot.html' %}
+
+  {% include 'foot.html' %}
 </html>

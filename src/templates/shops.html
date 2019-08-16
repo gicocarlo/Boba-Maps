@@ -2,7 +2,7 @@
 
 {% block links %}
 {% load static %}
-<link rel="stylesheet" href="{% static 'files/style.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
 {% endblock %}
 
 {% block body %}
@@ -24,6 +24,6 @@
 {% block map %}
   <h1>Inside map</h1>
   <div id="map"></div>
-  <script type="text/javascript" src="{% static 'files/script.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCd5cdzbtyzWuoA54FEYi9tPnPvhsMCnNs&callback=initMap" async defer></script>
 {% endblock %}

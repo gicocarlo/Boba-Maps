@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+{% extends 'base.html' %}
 
-  <head>
-    <meta charset="utf-8">
-    <title>Boba Maps</title>
-    {% include 'bootstrap_head.html' %}
-  </head>
-
-  <body>
+{% block body %}
       <div class="text-center" style="font-family: Raleway, sans-serif;font-size: 25px;font-weight: normal;">
         {% load static %}
           <div class="header-blue" style="background-image: url('{% static 'img/boba_wallpaper.jpeg' %}');background-repeat: no-repeat;background-size: cover;height: 795px;background-position: center;">
-              {% include 'nav.html' %}
               <div class="jumbotron text-center" style="background-color: rgba(255,255,255,0);padding-bottom: 64px;padding-top: 170px;">
                   <h1 style="color: #4b4c4d;font-family: Raleway, sans-serif;font-size: 100px;">Boba Maps</h1>
                   <p style="color: #4b4c4d;font-size: 25px;font-family: Raleway, sans-serif;">Find bubble tea shops in your area!</p>
@@ -25,8 +17,4 @@
               <div class="container" style="margin-top: 190px;"><em style="font-size: 19px;background-color: rgba(254,254,254,0);color: #444444;">Image from bobaguys.com</em></div>
           </div>
       </div>
-    {% include 'foot.html' %}
-    {% include 'bootstrap_scripts.html' %}
-
-  </body>
-</html>
+{% endblock %}

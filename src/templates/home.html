@@ -11,28 +11,7 @@
       <div class="text-center" style="font-family: Raleway, sans-serif;font-size: 25px;font-weight: normal;">
         {% load static %}
           <div class="header-blue" style="background-image: url('{% static 'img/boba_wallpaper.jpeg' %}');background-repeat: no-repeat;background-size: cover;height: 795px;background-position: center;">
-              <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search" style="background-color: rgba(255,255,255,0.7);">
-                  <div class="container"><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1" style="background-color: #aaaaaa;"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                      <div class="collapse navbar-collapse text-left"
-                          id="navcol-1">
-                          <ul class="nav navbar-nav">
-                              <li class="nav-item" role="presentation"></li>
-                          </ul><a href="#" style="font-family: Raleway, sans-serif;color: #37434d;font-size: 18px;font-weight: bold;font-style: normal;padding-left: 0px;padding-bottom: 0px;padding-right: 19px;">Boba Maps</a><a href="#" style="font-family: Raleway, sans-serif;font-weight: bold;color: #37434d;font-size: 18px;padding-right: 19px;padding-left: 19px;">About</a>
-                          <form
-                              class="form-inline mr-auto" target="_self">
-                              <div class="form-group"><label for="search-field"></label></div>
-                              </form><span class="navbar-text"> </span>
-                              <ul class="nav navbar-nav">
-                                  <li class="nav-item" role="presentation"></li>
-                                  <li class="nav-item" role="presentation"></li>
-                                  <li class="nav-item" role="presentation"></li>
-                                  <li class="nav-item" role="presentation"></li>
-                                  <li class="nav-item" role="presentation"></li>
-                                  <li class="nav-item" role="presentation"><a class="nav-link" href="#" style="font-family: Raleway, sans-serif;font-weight: bold;font-size: 18px;color: #4b4c4d;">Contact</a></li>
-                              </ul>
-                      </div>
-                  </div>
-              </nav>
+              {% include 'nav.html' %}
               <div class="jumbotron text-center" style="background-color: rgba(255,255,255,0);padding-bottom: 64px;padding-top: 170px;">
                   <h1 style="color: #4b4c4d;font-family: Raleway, sans-serif;font-size: 100px;">Boba Maps</h1>
                   <p style="color: #4b4c4d;font-size: 25px;font-family: Raleway, sans-serif;">Find bubble tea shops in your area!</p>

@@ -62,8 +62,9 @@ def boba_shops():
     return boba_list
 
 def shops_view(request):
-    # if request.method == 'GET':
-
-    boba_list = boba_shops()
-    boba_dict = {'boba_list': boba_list}
-    return render(request, 'shops.html', boba_dict)
+    # boba_list = boba_shops()
+    # boba_dict = {'boba_list': boba_list}
+    # form = AddressForm()
+    if request.method == 'GET':
+        address = request.GET.get('address')
+    return render(request, 'shops.html', {'test':address})

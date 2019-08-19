@@ -26,10 +26,10 @@ def request(host, path, api_key, params=None):
     response = requests.get(url=url, params=params, headers=headers)
     return response.json()
 
-def search_boba(path, api_key):
+def search_boba(path, api_key, location):
     params = {
         'categories': 'bubbletea',
-        'location': DEFAULT_LOCATION,
+        'location': location,
         'limit': SEARCH_LIMIT
     }
     return request(YELP_API_HOST, path, api_key, params)
@@ -38,17 +38,17 @@ def get_boba_spot(api_key, business_id):
     business_path = BUSINESS_PATH + business_id
     return request(YELP_API_HOST, business_path, api_key)
 
-def boba_shops_id():
-    b = search_boba(SEARCH_PATH, YELP_API_KEY)
+def boba_shops_id(location):
+    b = search_boba(SEARCH_PATH, YELP_API_KEY, location)
     b_list = b['businesses']
     b_list_id = []
     for i in range(len(b_list)):
         b_list_id.append(b_list[i]['id'])
     return b_list_id
 
-def boba_shops():
+def boba_shops(location):
     boba_list = []
-    b_list_id = boba_shops_id()
+    b_list_id = boba_shops_id(location)
     for i in b_list_id:
         response = get_boba_spot(YELP_API_KEY, i)
         boba_shop = {
@@ -62,9 +62,8 @@ def boba_shops():
     return boba_list
 
 def shops_view(request):
-    # boba_list = boba_shops()
-    # boba_dict = {'boba_list': boba_list}
-    # form = AddressForm()
     if request.method == 'GET':
         address = request.GET.get('address')
-    return render(request, 'shops.html', {'test':address})
+        boba_list = boba_shops(address)
+        boba_dict = {'boba_list': boba_list}
+    return render(request, 'shops.html', boba_dict)

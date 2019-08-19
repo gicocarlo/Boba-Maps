@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.conf import settings
+from django.http import Http404
 import requests
 import json
 
@@ -62,8 +63,11 @@ def boba_shops(location):
     return boba_list
 
 def shops_view(request):
-    if request.method == 'GET':
-        address = request.GET.get('address')
-        boba_list = boba_shops(address)
-        boba_dict = {'boba_list': boba_list}
-    return render(request, 'shops.html', boba_dict)
+    try:
+        if request.method == 'GET':
+            address = request.GET.get('address')
+            boba_list = boba_shops(address)
+            boba_dict = {'boba_list': boba_list}
+        return render(request, 'shops.html', boba_dict)
+    except:
+        raise Http404("Page does not exist")

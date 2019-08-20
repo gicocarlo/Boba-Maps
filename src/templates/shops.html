@@ -6,9 +6,27 @@
 {% endblock %}
 
 {% block body %}
-<h1>This is the Boba Shops page</h1>
+<div class="map-clean sticky-top"><iframe allowfullscreen="" frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD-P8w2kYZ2gM-gb1xv39Cb5HlwZcCHb00&amp;q=Paris%2C+France&amp;zoom=12" width="100%" height="250"></iframe></div>
+    <div class="d-inline map-clean">
+        <div class="container text-left border rounded shadow d-block" style="margin-bottom: 16px;">
+            <div class="intro" style="margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-right: 10px;padding-left: 15px;"></div>
+            <div>
+                <h2 class="text-left d-flex" style="margin-bottom: 10px;padding-top: 20px;padding-left: 0px;">Boba Shop</h2>
+                <ul class="list-group">
+                    <li class="list-group-item"><span>$$$$</span></li>
+                    <li class="list-group-item"><span>Address</span></li>
+                    <li class="list-group-item"><span>Phone</span></li>
+                    <li class="list-group-item"><span>&lt;Open or Close&gt;</span></li>
+                </ul>
+                <img style="width: 132px;height: 24px;margin: 0px;margin-top: 20px;margin-right: 10px;margin-bottom: 10px;padding: 0px;padding-top: 0px;">
+                {% load static %}
+                <img class="float-right" style="width: 100px;" src="{% static 'img/Yelp_trademark_RGB_outline.png' %}">
+                <p class="text-left" style="margin-top: 5px;">Based on &lt;num&gt; reviews</p>
+            </div>
+        </div>
+    </div>
 
-<ul>
+<!-- <ul>
   {% for boba in boba_list %}
     <p>{{ forloop.counter }}</p>
     <li>{{ boba.name }}</li>
@@ -16,13 +34,13 @@
     <li>{{ boba.addresses }}</li>
     <li>{{ boba.rating }}</li>
   {% endfor %}
-</ul>
+</ul> -->
 
 {% endblock %}
 
-{% block map %}
+<!-- {% block map %}
   <h1>Inside map</h1>
   <div id="map"></div>
   <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCd5cdzbtyzWuoA54FEYi9tPnPvhsMCnNs&callback=initMap" async defer></script>
-{% endblock %}
+{% endblock %} -->

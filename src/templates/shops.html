@@ -14,7 +14,7 @@
         <div class="container text-left border rounded shadow d-block" style="margin-bottom: 16px;">
             <div class="intro" style="margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-right: 10px;padding-left: 15px;"></div>
             <div>
-                <h2 class="text-left d-flex" style="margin-bottom: 10px;padding-top: 20px;padding-left: 0px;">{{ boba.name }}</h2>
+                <h2 class="text-left d-flex" style="margin-bottom: 10px;padding-top: 20px;padding-left: 0px;"> {{ forloop.counter }}. {{ boba.name }}</h2>
                 <ul class="list-group">
                     <li class="list-group-item"><span>{{ boba.price }}</span></li>
                     <li class="list-group-item"><span>{{ boba.address }}</span></li>
@@ -43,7 +43,10 @@
 {% endblock %}
 
 {% block map %}
-  <div id="map"></div>
+<div class="sticky-top">
+    <div id="map"></div>
+</div>
+  <!-- <div id="map"></div> -->
   <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBO8TcyQgFQHbyV200XbdkFN6TRsFsbDMI&callback=initMap" async defer></script>
 {% endblock %}

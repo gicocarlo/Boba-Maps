@@ -57,9 +57,9 @@ def boba_shops(location):
             'url': response["url"],
             'address': response["location"]["address1"],
             'rating': response["rating"],
-            # 'price': response["price"],
             'phone': response["display_phone"],
-            'review_count': response["review_count"]
+            'review_count': response["review_count"],
+            'is_closed': response["is_closed"]
         }
         boba_list.append(boba_shop)
 
@@ -69,7 +69,6 @@ def shops_view(request):
     if request.method == 'GET':
         address = request.GET.get('address')
         boba_list = boba_shops(address)
-        print(address)
         boba_dict = {
             'boba_list': boba_list,
         }

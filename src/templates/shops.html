@@ -6,10 +6,11 @@
 {% endblock %}
 
 {% block body %}
+{% load static %}
 <div class="map-clean sticky-top">
   <!-- <iframe allowfullscreen="" frameborder="0" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBO8TcyQgFQHbyV200XbdkFN6TRsFsbDMI&callback=initMap;zoom=13" width="100%" height="250"></iframe> -->
 </div>
-    <div class="d-inline map-clean">
+    <div class="d-inline map-clean" style="font-family: Raleway, sans-serif;font-size: 20px;font-weight: normal;">
       {% for boba in boba_list %}
         <div class="container text-left border rounded shadow d-block" style="margin-bottom: 16px;">
             <div class="intro" style="margin-right: 0px;margin-bottom: 0px;margin-left: 0px;padding-right: 10px;padding-left: 15px;"></div>
@@ -19,9 +20,12 @@
                     <li class="list-group-item"><span>{{ boba.price }}</span></li>
                     <li class="list-group-item"><span>{{ boba.address }}</span></li>
                     <li class="list-group-item"><span>{{ boba.phone }}</span></li>
-                    <li class="list-group-item"><span>&lt;Open or Close&gt;</span></li>
+                    {% if boba.is_closed == "False" %}
+                      <li class="list-group-item"><span>Open</span></li>
+                    {% else %}
+                      <li class="list-group-item"><span>Closed</span></li>
+                    {% endif %}
                 </ul>
-                {% load static %}
                 {% if boba.rating >= 5.0 %}
                   <img src="{% static 'img/5_star.png' %}" style="width: 132px;height: 24px;margin: 0px;margin-top: 20px;margin-right: 10px;margin-bottom: 10px;padding: 0px;padding-top: 0px;">
                 {% elif boba.rating >= 4.5 %}

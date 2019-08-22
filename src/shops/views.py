@@ -56,7 +56,7 @@ def boba_shops(location):
             'name': response["name"],
             'url': response["url"],
             'address': response["location"]["address1"],
-            # 'rating': response["rating"]
+            'rating': response["rating"],
             # 'price': response["price"],
             'phone': response["display_phone"],
             'review_count': response["review_count"]

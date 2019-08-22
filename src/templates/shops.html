@@ -21,8 +21,29 @@
                     <li class="list-group-item"><span>{{ boba.phone }}</span></li>
                     <li class="list-group-item"><span>&lt;Open or Close&gt;</span></li>
                 </ul>
-                <img style="width: 132px;height: 24px;margin: 0px;margin-top: 20px;margin-right: 10px;margin-bottom: 10px;padding: 0px;padding-top: 0px;">
                 {% load static %}
+                {% if boba.rating >= 5.0 %}
+                  <img src="{% static 'img/5_star.png' %}" style="width: 132px;height: 24px;margin: 0px;margin-top: 20px;margin-right: 10px;margin-bottom: 10px;padding: 0px;padding-top: 0px;">
+                {% elif boba.rating >= 4.5 %}
+                  <img src="{% static 'img/4_star_half.png' %}" style="width: 132px;height: 24px;margin: 0px;margin-top: 20px;margin-right: 10px;margin-bottom: 10px;padding: 0px;padding-top: 0px;">
+                {% elif boba.rating >= 4.0 %}
+                  <img src="{% static 'img/4_star.png' %}" style="width: 132px;height: 24px;margin: 0px;margin-top: 20px;margin-right: 10px;margin-bottom: 10px;padding: 0px;padding-top: 0px;">
+                {% elif boba.rating >= 3.5 %}
+                  <img src="{% static 'img/3_star_half.png' %}" style="width: 132px;height: 24px;margin: 0px;margin-top: 20px;margin-right: 10px;margin-bottom: 10px;padding: 0px;padding-top: 0px;">
+                {% elif boba.rating >= 3.0 %}
+                  <img src="{% static 'img/3_star.png' %}" style="width: 132px;height: 24px;margin: 0px;margin-top: 20px;margin-right: 10px;margin-bottom: 10px;padding: 0px;padding-top: 0px;">
+                {% elif boba.rating >= 2.5 %}
+                  <img src="{% static 'img/2_star_half.png' %}" style="width: 132px;height: 24px;margin: 0px;margin-top: 20px;margin-right: 10px;margin-bottom: 10px;padding: 0px;padding-top: 0px;">
+                {% elif boba.rating >= 2.0 %}
+                  <img src="{% static 'img/2_star.png' %}" style="width: 132px;height: 24px;margin: 0px;margin-top: 20px;margin-right: 10px;margin-bottom: 10px;padding: 0px;padding-top: 0px;">
+                {% elif boba.rating >= 1.5 %}
+                  <img src="{% static 'img/1_star_half.png' %}" style="width: 132px;height: 24px;margin: 0px;margin-top: 20px;margin-right: 10px;margin-bottom: 10px;padding: 0px;padding-top: 0px;">
+                {% elif boba.rating >= 1.0 %}
+                  <img src="{% static 'img/1_star.png' %}" style="width: 132px;height: 24px;margin: 0px;margin-top: 20px;margin-right: 10px;margin-bottom: 10px;padding: 0px;padding-top: 0px;">
+                {% else %}
+                  <img src="{% static 'img/0_star.png' %}" style="width: 132px;height: 24px;margin: 0px;margin-top: 20px;margin-right: 10px;margin-bottom: 10px;padding: 0px;padding-top: 0px;">
+                {% endif %}
+
                 <a href="{{ boba.url }}" target="_blank"><img class="float-right" style="width: 100px;" src="{% static 'img/Yelp_trademark_RGB_outline.png' %}"></a>
                 <p class="text-left" style="margin-top: 5px;">Based on {{ boba.review_count }} reviews</p>
             </div>

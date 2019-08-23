@@ -72,5 +72,6 @@ def shops_view(request):
         boba_list = boba_shops(address)
         boba_dict = {
             'boba_list': boba_list,
+            'location': address
         }
     return render(request, 'shops.html', boba_dict)

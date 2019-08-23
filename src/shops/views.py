@@ -61,6 +61,8 @@ def boba_shops(location):
             'review_count': response["review_count"],
             'is_closed': response["is_closed"]
         }
+        print(boba_shop['is_closed'])
+        print(type(boba_shop['is_closed']))
         boba_list.append(boba_shop)
 
     return boba_list

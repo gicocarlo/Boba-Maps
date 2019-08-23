@@ -20,10 +20,10 @@
                     <li class="list-group-item"><span>{{ boba.price }}</span></li>
                     <li class="list-group-item"><span>{{ boba.address }}</span></li>
                     <li class="list-group-item"><span>{{ boba.phone }}</span></li>
-                    {% if boba.is_closed == "False" %}
-                      <li class="list-group-item"><span>Open</span></li>
-                    {% else %}
+                    {% if boba.is_closed %}
                       <li class="list-group-item"><span>Closed</span></li>
+                    {% else %}
+                      <li class="list-group-item"><span>Open</span></li>
                     {% endif %}
                 </ul>
                 {% if boba.rating >= 5.0 %}

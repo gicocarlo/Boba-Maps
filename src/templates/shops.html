@@ -62,7 +62,7 @@
     <div id="map"></div>
 </div>
   {{ location|json_script:"boba_loc" }}
-  {{ boba_list|json_script:"boba_list" }}
+  <!-- {{ boba_list|json_script:"boba_list" }} -->
   <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBO8TcyQgFQHbyV200XbdkFN6TRsFsbDMI&callback=initMap" async defer></script>
 {% endblock %}

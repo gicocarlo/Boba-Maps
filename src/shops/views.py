@@ -56,12 +56,18 @@ def boba_shops(location):
             'name': response["name"],
             'url': response["url"],
             'address': response["location"]["address1"],
+            'city': response["location"]["city"],
+            'state': response["location"]["state"],
+            'zip_code': response["location"]["zip_code"],
             'rating': response["rating"],
             'phone': response["display_phone"],
             'review_count': response["review_count"],
             'is_open_now': response["hours"][0]["is_open_now"],
-            'photo': response["image_url"]
+            'photo': response["image_url"],
+            'coordinates': response["coordinates"]
         }
+        print(boba_shop['address'])
+        print(boba_shop['city'])
         boba_list.append(boba_shop)
 
     return boba_list

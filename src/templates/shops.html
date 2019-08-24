@@ -18,7 +18,7 @@
                 <h2 class="text-left d-flex" style="margin-bottom: 10px;padding-top: 20px;padding-left: 0px;"> {{ forloop.counter }}. {{ boba.name }}</h2>
                 <ul class="list-group text-center">
                     <li class="list-group-item"><span><img src="{{ boba.photo }}" alt="Photo of {{ boba.name }}" width="225" height="225"></span></li>
-                    <li class="list-group-item"><span>{{ boba.address }}</span></li>
+                    <li class="list-group-item"><span>{{ boba.address }}, {{ boba.city }}, {{ boba.state }}, {{ boba.zip_code }}</span></li>
                     <li class="list-group-item"><span>{{ boba.phone }}</span></li>
                     {% if boba.is_open_now %}
                       <li class="list-group-item"><span>Open</span></li>
@@ -62,7 +62,7 @@
     <div id="map"></div>
 </div>
   {{ location|json_script:"boba_loc" }}
-  <!-- {{ boba_list|json_script:"boba_list" }} -->
+  {{ boba_list|json_script:"boba_list" }}
   <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBO8TcyQgFQHbyV200XbdkFN6TRsFsbDMI&callback=initMap" async defer></script>
 {% endblock %}

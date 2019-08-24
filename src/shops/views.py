@@ -73,11 +73,14 @@ def boba_shops(location):
     return boba_list
 
 def shops_view(request):
-    if request.method == 'GET':
-        address = request.GET.get('address')
-        boba_list = boba_shops(address)
-        boba_dict = {
-            'boba_list': boba_list,
-            'location': address
-        }
-    return render(request, 'shops.html', boba_dict)
+    try:
+        if request.method == 'GET':
+            address = request.GET.get('address')
+            boba_list = boba_shops(address)
+            boba_dict = {
+                'boba_list': boba_list,
+                'location': address
+                }
+        return render(request, 'shops.html', boba_dict)
+    except:
+        raise Http404('Page does not exist');

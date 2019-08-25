@@ -66,8 +66,6 @@ def boba_shops(location):
             'photo': response["image_url"],
             'coordinates': response["coordinates"]
         }
-        print(boba_shop['address'])
-        print(boba_shop['city'])
         boba_list.append(boba_shop)
 
     return boba_list

@@ -8,9 +8,6 @@
 
 {% block body %}
 {% load static %}
-<div class="map-clean sticky-top">
-  <!-- <iframe allowfullscreen="" frameborder="0" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBO8TcyQgFQHbyV200XbdkFN6TRsFsbDMI&callback=initMap;zoom=13" width="100%" height="250"></iframe> -->
-</div>
     <div class="d-inline map-clean" style="font-family: Raleway, sans-serif;font-size: 20px;font-weight: normal;">
       {% for boba in boba_list %}
         <div class="container text-left border rounded shadow d-block" style="margin-bottom: 16px;">
@@ -28,25 +25,25 @@
                     {% endif %}
                 </ul>
                 {% if boba.rating >= 5.0 %}
-                  <img src="{% static 'img/5_star.png' %}" style="width: 132px;height: 24px;margin: 0px;margin-top: 20px;margin-right: 10px;margin-bottom: 10px;padding: 0px;padding-top: 0px;">
+                  <img id="rating" src="{% static 'img/5_star.png' %}">
                 {% elif boba.rating >= 4.5 %}
-                  <img src="{% static 'img/4_star_half.png' %}" style="width: 132px;height: 24px;margin: 0px;margin-top: 20px;margin-right: 10px;margin-bottom: 10px;padding: 0px;padding-top: 0px;">
+                  <img id="rating" src="{% static 'img/4_star_half.png' %}">
                 {% elif boba.rating >= 4.0 %}
-                  <img src="{% static 'img/4_star.png' %}" style="width: 132px;height: 24px;margin: 0px;margin-top: 20px;margin-right: 10px;margin-bottom: 10px;padding: 0px;padding-top: 0px;">
+                  <img id="rating" src="{% static 'img/4_star.png' %}">
                 {% elif boba.rating >= 3.5 %}
-                  <img src="{% static 'img/3_star_half.png' %}" style="width: 132px;height: 24px;margin: 0px;margin-top: 20px;margin-right: 10px;margin-bottom: 10px;padding: 0px;padding-top: 0px;">
+                  <img id="rating" src="{% static 'img/3_star_half.png' %}">
                 {% elif boba.rating >= 3.0 %}
-                  <img src="{% static 'img/3_star.png' %}" style="width: 132px;height: 24px;margin: 0px;margin-top: 20px;margin-right: 10px;margin-bottom: 10px;padding: 0px;padding-top: 0px;">
+                  <img id="rating" src="{% static 'img/3_star.png' %}">
                 {% elif boba.rating >= 2.5 %}
-                  <img src="{% static 'img/2_star_half.png' %}" style="width: 132px;height: 24px;margin: 0px;margin-top: 20px;margin-right: 10px;margin-bottom: 10px;padding: 0px;padding-top: 0px;">
+                  <img id="rating" src="{% static 'img/2_star_half.png' %}">
                 {% elif boba.rating >= 2.0 %}
-                  <img src="{% static 'img/2_star.png' %}" style="width: 132px;height: 24px;margin: 0px;margin-top: 20px;margin-right: 10px;margin-bottom: 10px;padding: 0px;padding-top: 0px;">
+                  <img id="rating" src="{% static 'img/2_star.png' %}">
                 {% elif boba.rating >= 1.5 %}
-                  <img src="{% static 'img/1_star_half.png' %}" style="width: 132px;height: 24px;margin: 0px;margin-top: 20px;margin-right: 10px;margin-bottom: 10px;padding: 0px;padding-top: 0px;">
+                  <img id="rating" src="{% static 'img/1_star_half.png' %}">
                 {% elif boba.rating >= 1.0 %}
-                  <img src="{% static 'img/1_star.png' %}" style="width: 132px;height: 24px;margin: 0px;margin-top: 20px;margin-right: 10px;margin-bottom: 10px;padding: 0px;padding-top: 0px;">
+                  <img id="rating" src="{% static 'img/1_star.png' %}">
                 {% else %}
-                  <img src="{% static 'img/0_star.png' %}" style="width: 132px;height: 24px;margin: 0px;margin-top: 20px;margin-right: 10px;margin-bottom: 10px;padding: 0px;padding-top: 0px;">
+                  <img id="rating" src="{% static 'img/0_star.png' %}">
                 {% endif %}
 
                 <a href="{{ boba.url }}" target="_blank"><img class="float-right" style="width: 100px;" src="{% static 'img/Yelp_trademark_RGB_outline.png' %}"></a>

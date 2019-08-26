@@ -14,8 +14,7 @@ YELP_API_HOST = 'https://api.yelp.com/v3'
 SEARCH_PATH = '/businesses/search'
 BUSINESS_PATH = '/businesses/' #ID
 
-# DEFAULTS
-DEFAULT_LOCATION = 'San Francisco, CA'
+# Search limit for number of bubble tea shops
 SEARCH_LIMIT = 5
 
 def request(host, path, api_key, params=None):
@@ -81,4 +80,4 @@ def shops_view(request):
                 }
         return render(request, 'shops.html', boba_dict)
     except:
-        raise Http404('Page does not exist');
+        raise Http404('Page does not exist')

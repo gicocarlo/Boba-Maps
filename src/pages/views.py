@@ -1,14 +1,24 @@
 from django.shortcuts import render
+from django.http import Http404
 
 # Create your views here.
 
 # home_view()
 def home_view(request):
-    return render(request, 'home.html')
+    try:
+        return render(request, 'home.html')
+    except:
+        raise Http404('Page does not exist')
 
 # about_view()
 def about_view(request):
-    return render(request, 'about.html')
+    try:
+        return render(request, 'about.html')
+    except:
+        raise Http404('Page does not exist')
 
 def contact_view(request):
-    return render(request, 'contact.html')
+    try:
+        return render(request, 'home.html')
+    except:
+        raise Http404('Page does not exist')

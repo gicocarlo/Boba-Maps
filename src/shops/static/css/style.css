@@ -1,3 +1,4 @@
+/* Shops View */
 #rating {
   width: 132px;
   height: 24px;
@@ -12,4 +13,40 @@
 #map {
   height: 400px;
   width: 100%;
+}
+
+/* About View */
+#about-section {
+  font-family: Raleway, sans-serif;
+}
+
+#about-section .text p {
+  font-size: 20px;
+}
+
+/* Contact View */
+.contact-clean form {
+  max-width: 480px;
+  width: 90%;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 4px;
+  color: #505e6c;
+}
+
+.contact-clean h2 {
+  margin-top: 5px;
+  font-size: 28px;
+  margin-bottom: 36px;
+  color: inherit;
+}
+
+.contact-clean div {
+  font-family: Raleway, sans-serif;
+}
+
+.contact-clean .btn {
+  background-color: #4b4c4d;
+  width: 75px;
 }

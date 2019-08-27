@@ -1,23 +1,25 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<div class="text-center" style="font-family: Raleway, sans-serif;font-size: 25px;font-weight: normal;">
+<div id="home" class="text-center">
         {% load static %}
-        <div class="header-blue" style="background-image: url('{% static 'img/boba_wallpaper.jpeg' %}');background-repeat: no-repeat;background-size: cover;height: 795px;background-position: center;">
-            <div class="jumbotron text-center" style="background-color: rgba(255,255,255,0);padding-bottom: 64px;padding-top: 170px;">
-                <h1 style="color: #4b4c4d;font-family: Raleway, sans-serif;font-size: 100px;">Boba Maps</h1>
-                <p style="color: #4b4c4d;font-size: 25px;font-family: Raleway, sans-serif;">Find bubble tea shops in your area!</p>
+        <div class="header-blue" style="background-image: url('{% static 'img/boba_wallpaper.jpeg' %}');">
+            <div class="jumbotron text-center">
+                <h1>Boba Maps</h1>
+                <p>Find bubble tea shops in your area!</p>
                 <p></p>
             </div>
             <div class="container">
                 <form action="/shops" method='GET'>
-                    <div class="form-group bg-white border rounded d-flex" style="background-color: #f0f0f0;">
-                      <input class="border-white form-control form-control-lg" type="text" name="address" style="font-family: Raleway, sans-serif;" placeholder="&quot;San Francisco, CA&quot;, &quot;SF&quot;, &quot;429 Stockton St, San Francisco, CA 94108&quot;" required>
-                        <button class="btn btn-primary btn-lg border-white" type="submit" style="background-color: #ffffff;">
-                          <i class="fa fa-search" style="color: #4b4c4d;"></i>
+                    <div class="form-group bg-white border rounded d-flex">
+                      <input class="border-white form-control form-control-lg" type="text" name="address" placeholder="&quot;San Francisco, CA&quot;, &quot;SF&quot;, &quot;429 Stockton St, San Francisco, CA 94108&quot;" required>
+                        <button class="btn btn-primary btn-lg border-white" type="submit">
+                          <i class="fa fa-search"></i>
                         </button>
                     </div>
                 </form>
-            </div><em style="font-size: 19px;background-color: rgba(254,254,254,0);color: #444444;">Image from bobaguys.com</em></div>
+            </div>
+            <em>Image from bobaguys.com</em>
+        </div>
     </div>
 {% endblock %}

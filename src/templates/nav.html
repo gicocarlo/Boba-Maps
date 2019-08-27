@@ -1,6 +1,11 @@
-<nav class="navbar navbar-dark navbar-expand-md navigation-clean-search" style="background-color: rgba(255,255,255,0.7);">
-    <div class="container"><a href="/" style="font-family: Raleway, sans-serif;color: #37434d;font-size: 25px;font-weight: normal;font-style: normal;padding-left: 0px;padding-bottom: 0px;padding-right: 19px;">Boba Maps</a><button data-toggle="collapse" class="navbar-toggler"
-            data-target="#navcol-1" style="background-color: #aaaaaa;"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+<nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
+    <div class="container">
+      <a href="/">Boba Maps</a>
+      <button data-toggle="collapse" class="navbar-toggler"
+            data-target="#navcol-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon"></span>
+          </button>
         <div class="collapse navbar-collapse text-left" id="navcol-1">
             <ul class="nav navbar-nav">
                 <li class="nav-item" role="presentation"></li>
@@ -10,15 +15,17 @@
                   <label for="search-field">
                   </label>
                 </div>
-                <div class="form-group border rounded d-flex" style="width: 330px;margin-top: 8px;margin-bottom: 8px; background-color: #ffffff;">
+                <div id="search" class="form-group border rounded d-flex">
                   <input class="border-white form-control" type="search" name="address" style="width: 287px;" placeholder="Enter location" required>
-                  <button class="btn btn-primary border-white" type="submit" style="background-color: #ffffff;">
-                    <i class="fa fa-search" style="color: #4b4c4d;"></i>
+                  <button class="btn btn-primary border-white" type="submit">
+                    <i class="fa fa-search"></i>
                   </button>
                 </div>
             </form>
-            <a href="/about" style="font-family: Raleway, sans-serif;font-weight: normal;color: #37434d;font-size: 18px;padding: 8px;padding-right: 8px;padding-left: 5px;">About</a>
-            <a href="/contact" style="font-family: Raleway, sans-serif;font-weight: normal;color: #37434d;font-size: 18px;padding: 8px;padding-right: 8px;padding-left: 8px;">Contact</a>
-          </div>
+            <div class="links">
+              <a id="about-link" href="/about">About</a>
+              <a id="contact-link" href="/contact">Contact</a>
+            </div>
+        </div>
     </div>
 </nav>

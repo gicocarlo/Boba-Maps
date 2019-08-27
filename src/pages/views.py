@@ -17,6 +17,7 @@ def about_view(request):
     except:
         raise Http404('Page does not exist')
 
+# contact_view()
 def contact_view(request):
     try:
         return render(request, 'contact.html')

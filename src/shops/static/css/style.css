@@ -15,6 +15,60 @@
   width: 100%;
 }
 
+/* Home View */
+#home {
+  font-family: Raleway, sans-serif;
+  font-size: 25px;
+  font-weight: normal;
+}
+
+#home .header-blue {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 795px;
+  background-position: center;
+}
+
+#home .header-blue em {
+  font-size: 19px;
+  background-color: rgba(254,254,254,0);
+  color: #444444;
+}
+
+#home .header-blue .jumbotron {
+  background-color: rgba(255,255,255,0);
+  padding-bottom: 64px;
+  padding-top: 170px;
+}
+
+#home .header-blue .jumbotron h1 {
+  color: #4b4c4d;
+  font-family: Raleway, sans-serif;
+  font-size: 100px;
+}
+
+#home .header-blue .jumbotron p {
+  color: #4b4c4d;
+  font-size: 25px;
+  font-family: Raleway, sans-serif;
+}
+
+#home .header-blue .container .form-group{
+  background-color: #f0f0f0;
+}
+
+#home .header-blue .container .form-group input{
+  font-family: Raleway, sans-serif;
+}
+
+#home .header-blue .container .form-group button {
+  background-color: #ffffff;
+}
+
+#home .header-blue .container .form-group i {
+  color: #4b4c4d;
+}
+
 /* About View */
 #about-section {
   font-family: Raleway, sans-serif;
@@ -22,6 +76,15 @@
 
 #about-section .text p {
   font-size: 20px;
+}
+
+.text-center a {
+  text-decoration: none;
+}
+
+.text-center a img {
+  height: 64px;
+  margin: 10px 20px;
 }
 
 /* Contact View */
@@ -49,4 +112,61 @@
 .contact-clean .btn {
   background-color: #4b4c4d;
   width: 75px;
+}
+
+/* nav.html */
+.navbar {
+  background-color: rgba(255,255,255,0.7);
+}
+
+.navbar .container a {
+  font-family: Raleway, sans-serif;
+  color: #37434d;
+  font-size: 25px;
+  font-weight: normal;
+  font-style: normal;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  padding-right: 19px;
+}
+
+.navbar .container .navbar-collapse .links a{
+  font-family: Raleway, sans-serif;
+  font-weight: normal;
+  color: #37434d;
+  font-size: 18px;
+  padding: 8px;
+  padding-right: 8px;
+}
+
+.navbar .container .collapse #about-link {
+  padding-left: 5px;
+}
+
+.navbar .container .collapse #contact-link {
+  padding-left: 8px;
+}
+
+.navbar .container .navbar-toggler {
+  background-color: #aaaaaa;
+}
+
+.navbar .container .form-group #search{
+  width: 330px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background-color: #ffffff;
+}
+
+.navbar .container .form-group .btn {
+  background-color: #ffffff;
+}
+
+.navbar .container .form-group .fa {
+  color: #4b4c4d;
+}
+
+/* foot.html */
+footer {
+  font-family: Roboto, sans-serif;
 }

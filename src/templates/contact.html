@@ -6,18 +6,13 @@
 
 {% block body %}
 <div class="contact-clean">
-  <form action="/contact" method="post">
+  <form action="." method="post">{% csrf_token %}
       <h2 class="text-center" style="font-family: Raleway, sans-serif;">Contact me</h2>
       {% for field in contact_form %}
         <div class="form-group">
-          {% csrf_token %}
           {{ field }}
         </div>
       {% endfor %}
-      <!-- <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Name"></div>
-      <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"></div>
-      <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Subject"></div>
-      <div class="form-group"><textarea class="form-control" name="message" placeholder="Message" rows="14"></textarea></div> -->
       <div class="form-group text-center">
         <button class="btn btn-primary" type="submit">Send</button>
       </div>

@@ -20,13 +20,15 @@ def about_view(request):
 
 # contact_view()
 def contact_view(request):
-    contact_form = ContactForm(request.GET)
-    if request.method == "POST":
-        contact_form = ContactForm(request.POST)
-        if contact_form.is_valid():
-            print(contact_form.cleaned_data)
-    context = {
-        "contact_form": contact_form
-    }
-    print(contact_form)
-    return render(request, 'contact.html', context)
+    try:
+        contact_form = ContactForm(request.GET)
+        if request.method == "POST":
+            contact_form = ContactForm(request.POST)
+            if contact_form.is_valid():
+                print(contact_form.cleaned_data)
+        context = {
+            "contact_form": contact_form
+        }
+        return render(request, 'contact.html', context)
+    except:
+        raise Http404('Page does not exist')

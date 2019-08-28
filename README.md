@@ -5,7 +5,7 @@ Find a local bubble tea shop in your area!
 - [x] Brush up on Javascript
 - [x] Learn SQL
 - [x] Learn Django
-- [ ] Design 
-- [ ] Code 
+- [x] Design 
+- [x] Code 
 - [ ] Test 
 - [ ] Depoly

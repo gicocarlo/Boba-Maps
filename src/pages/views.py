@@ -21,11 +21,12 @@ def about_view(request):
 # contact_view()
 def contact_view(request):
     try:
-        contact_form = ContactForm(request.GET)
+        contact_form = ContactForm()
         if request.method == "POST":
             contact_form = ContactForm(request.POST)
             if contact_form.is_valid():
                 print(contact_form.cleaned_data)
+                contact_form = ContactForm()
         context = {
             "contact_form": contact_form
         }

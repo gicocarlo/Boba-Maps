@@ -66,6 +66,7 @@ Raise:
 def contact_view(request):
     try:
         form = ContactForm()
+        success = False
         if request.method == "POST":
             form = ContactForm(request.POST)
             if form.is_valid():
@@ -80,10 +81,12 @@ def contact_view(request):
                     ['evangelistagico@gmail.com'],
                     fail_silently=False
                 )
+                success = True
                 form = ContactForm()
-                context = {
-                    "contact_form": form
-                }
+        context = {
+            "contact_form": form,
+            "success": success
+        }
         return render(request, 'contact.html', context)
     except:
         raise Http404('Page does not exist')

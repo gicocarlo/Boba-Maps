@@ -8,6 +8,9 @@
 <div class="contact-clean">
   <form action="." method="post">{% csrf_token %}
       <h2 class="text-center" style="font-family: Raleway, sans-serif;">Contact me</h2>
+        {% if success %}
+          <div class="alert alert-success"> Message Sent! </div>
+        {% endif %}
       {% for field in contact_form %}
         <div class="form-group">
           {{ field }}

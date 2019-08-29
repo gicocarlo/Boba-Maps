@@ -28,7 +28,7 @@ SENDGRID_API_KEY = os.environ.get('SENDGRID_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = (os.environ.get('DEBUG') == 'True')
 
-ALLOWED_HOSTS = ['bobamaps.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','bobamaps.herokuapp.com']
 
 # Application definition
 

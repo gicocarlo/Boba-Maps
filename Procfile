@@ -1,1 +1,1 @@
-web: gunicorn src/Boba-Maps.wsgi
+web: gunicorn src/BobaMaps.wsgi

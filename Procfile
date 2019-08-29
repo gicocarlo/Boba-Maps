@@ -1,1 +1,1 @@
-web: gunicorn BobaMaps.wsgi --log-file -
+web: gunicorn Boba-Maps.wsgi

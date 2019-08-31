@@ -137,3 +137,7 @@ EMAIL_USE_TLS = True
 # django_heroku
 
 django_heroku.settings(locals())
+
+# Security
+
+SECURE_SSL_REDIRECT = True

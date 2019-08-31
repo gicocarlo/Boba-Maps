@@ -142,7 +142,7 @@ EMAIL_USE_TLS = True
 django_heroku.settings(locals())
 
 # Security
-SECURE_HSTS_SECONDS            = 3600
+SECURE_HSTS_SECONDS            = 31536000
 SECURE_HSTS_PRELOAD            = True
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SECURE_CONTENT_TYPE_NOSNIFF    = True

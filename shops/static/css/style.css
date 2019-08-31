@@ -78,6 +78,13 @@
   font-size: 20px;
 }
 
+#about-section .text .buymeacoffee {
+  display: block;
+  margin: 0 auto;
+  height: auto!important;
+  width: auto!important;
+}
+
 .text-center a {
   text-decoration: none;
 }
@@ -85,6 +92,10 @@
 .text-center a img {
   height: 64px;
   margin: 10px 20px;
+}
+
+.brands {
+  padding: 40px;
 }
 
 /* Contact View */

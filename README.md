@@ -1,4 +1,4 @@
-# 🍵 [Boba Maps](https://bobamaps.herokuapp.com/) 🥛
+# 🍵 [Boba Maps](https://www.bobamaps.xyz) 🥛
 Find bubble tea shops in your area!
 
 ## About

@@ -8,6 +8,9 @@ https://docs.djangoproject.com/en/2.2/topics/settings/
 
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
+
+NOTHING ON THIS FILE WILL CHANGE EXCEPT BY GICO
+ANY PR THAT INVOLVES THIS FILE WILL NOT BE MERGED
 """
 
 import os
@@ -28,7 +31,7 @@ SENDGRID_API_KEY = os.environ.get('SENDGRID_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = (os.environ.get('DEBUG') == 'True')
 
-ALLOWED_HOSTS = ['127.0.0.1','bobamaps.herokuapp.com','www.bobamaps.xyz','bobamaps.xyz']
+ALLOWED_HOSTS = ['bobamaps.herokuapp.com','www.bobamaps.xyz','bobamaps.xyz']
 
 # Application definition
 
@@ -139,5 +142,12 @@ EMAIL_USE_TLS = True
 django_heroku.settings(locals())
 
 # Security
-
-SECURE_SSL_REDIRECT = True
+SECURE_HSTS_SECONDS            = 3600
+SECURE_HSTS_PRELOAD            = True
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_CONTENT_TYPE_NOSNIFF    = True
+SECURE_BROWSER_XSS_FILTER      = True
+SESSION_COOKIE_SECURE          = True
+CSRF_COOKIE_SECURE             = True
+X_FRAME_OPTIONS                = 'DENY'
+SECURE_SSL_REDIRECT            = True

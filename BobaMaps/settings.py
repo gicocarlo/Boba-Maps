@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 NOTHING ON THIS FILE WILL CHANGE EXCEPT BY GICO
 ANY PR THAT INVOLVES THIS FILE WILL NOT BE MERGED
+
+For testing add your own local_settings.py
 """
 
 import os
@@ -151,3 +153,10 @@ SESSION_COOKIE_SECURE          = True
 CSRF_COOKIE_SECURE             = True
 X_FRAME_OPTIONS                = 'DENY'
 SECURE_SSL_REDIRECT            = True
+
+# Local settings for development testing
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass

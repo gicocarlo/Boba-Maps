@@ -1,12 +1,3 @@
----
-name: PULL_REQUEST_TEMPLATE.md
-about: Steps to make a proper pull requst
-title: ''
-labels: ''
-assignees: ''
-
----
-
 ## Description
 Describe your changes in detail 
 

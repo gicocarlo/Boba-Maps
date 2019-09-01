@@ -28,7 +28,7 @@ Boba Maps is a dynamic web application that helps you find local bubble tea shop
 This project is licensed under the [GPL-3.0](LICENSE) - see the LICENSE file for details
 
 ## Contributing Guide
-Please read [CONTRIBUTING.md](CONTRIBUTING.md), [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md), & [PULL_REQUEST_TEMPLATE.md](PULL_REQUEST_TEMPLATE.md) on the process for submitting pull requests.
+Please read [CONTRIBUTING.md](CONTRIBUTING.md), [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md), & [PULL_REQUEST_TEMPLATE.md](.github/ISSUE_TEMPLATE/PULL_REQUEST_TEMPLATE.md) on the process for submitting pull requests.
 
 ## Contributors 
 - [**Gico Carlo Evangelista**](https://github.com/RiceAbove) - Creator, Full Stack 

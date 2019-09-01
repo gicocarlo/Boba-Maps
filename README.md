@@ -1,4 +1,6 @@
 # 🍵 [Boba Maps](https://www.bobamaps.xyz) 🥛
+[![License:GPL-3.0-only](https://img.shields.io/github/license/RiceAbove/Boba-Maps)](https://opensource.org/licenses/GPL-3.0)
+
 Find bubble tea shops in your area!
 
 ## About

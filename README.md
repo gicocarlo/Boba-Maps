@@ -1,10 +1,14 @@
 # 🍵 [Boba Maps](https://www.bobamaps.xyz) 🥛
 [![License:GPL-3.0-only](https://img.shields.io/github/license/RiceAbove/Boba-Maps)](https://opensource.org/licenses/GPL-3.0)
 
-Find bubble tea shops in your area!
+Find bubble tea restaurants in your area!
 
 ## About
-Boba Maps is a dynamic web application that helps you find local bubble tea shops in your area! Just simply type in an address in the search bar & the site will quickly find shops in that location. It's desktop & mobile friendly so you can find boba anywhere you go!
+Boba Maps is a dynamic web application that helps you find bubble tea restaurants in your area! Just simply type in an address in the search bar & the site will quickly find shops in that location. It's desktop & mobile friendly so you can find boba anywhere you go!
+
+## What is bubble tea?
+This is the definition according to [Wikipedia](https://en.wikipedia.org/wiki/Bubble_tea):
+> Bubble tea is a Taiwanese tea-based drink invented in Tainan and Taichung in the 1980s. Recipes contain tea of some kind, flavors of milk, and sugar. Toppings, known as "pearls", such as chewy tapioca balls, popping boba, fruit jelly, grass jelly, agar jelly, alovera jelly,sago and puddings are often added.
 
 ## Built With
 
